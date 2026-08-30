@@ -8,15 +8,11 @@ import {
   MessageCircle,
   Menu,
   X,
-  MapPin,
-  Clock,
   Package,
   Layers,
   Sparkles,
   ShieldCheck,
   ChevronRight,
-  BadgePercent,
-  Truck,
 } from "lucide-react";
 import { COMPANY } from "@/data/company";
 import { NaturalTradersLogo } from "./NaturalTradersLogo";
@@ -47,33 +43,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
-      {/* 1. Ultra-Clean Single Top Utility Bar */}
-      <div className="bg-slate-950 text-slate-300 text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800/80 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          {/* Left: Location & Route Info */}
-          <div className="flex items-center gap-1.5 sm:gap-3 truncate">
-            <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold shrink-0">
-              <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-              <span>Dhampur (UP)</span>
-            </span>
-            <span className="text-slate-600 hidden sm:inline">•</span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-slate-300 truncate">
-              <Truck className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-              <span>{isHindi ? "पश्चिमी यूपी में सीधे दुकान तक सप्लाई" : "Direct Supply Across Western UP"}</span>
-            </span>
-          </div>
-
-          {/* Right: Discount Alert */}
-          <div className="flex items-center shrink-0">
-            <span className="inline-flex items-center gap-1 text-amber-400 font-medium bg-amber-950/60 px-2 py-0.5 rounded border border-amber-800/50 text-[10px] sm:text-xs whitespace-nowrap">
-              <BadgePercent className="w-3 h-3 text-amber-400 shrink-0" />
-              <span>{isHindi ? "50+ क्रेट: 5% छूट" : "50+ Crates: 5% Off"}</span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Main Navigation Bar */}
+      {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           {/* Left: Prominent Bold Logo */}
