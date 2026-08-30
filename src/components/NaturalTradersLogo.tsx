@@ -30,7 +30,7 @@ export function NaturalTradersLogo({
   };
 
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-3 select-none ${className}`}>
       {/* Option 2: Geometric 'NT' Monogram + Golden Spark */}
       <div
         className={`${iconSizes[size]} relative rounded-2xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-slate-900 p-0.5 shadow-md shadow-emerald-950/20 group-hover:shadow-emerald-500/25 transition-all duration-300 group-hover:scale-105 shrink-0`}
@@ -89,14 +89,14 @@ export function NaturalTradersLogo({
       </div>
 
       {/* Brand Typography & Tagline */}
-      <div className="flex flex-col justify-center">
-        <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex flex-col justify-center min-w-0">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           {isHindi ? (
-            <span className={`${titleSizes[size]} font-black text-slate-900 dark:text-white leading-tight`}>
+            <span className={`${titleSizes[size]} font-black text-slate-900 dark:text-white leading-tight whitespace-nowrap`}>
               नेचुरल <span className="text-teal-600 dark:text-teal-400">ट्रेडर्स</span>
             </span>
           ) : (
-            <span className={`${titleSizes[size]} font-black leading-tight tracking-tight`}>
+            <span className={`${titleSizes[size]} font-black leading-tight tracking-tight whitespace-nowrap`}>
               <span className="text-slate-950 dark:text-white font-black">Natural</span>{" "}
               <span className="text-teal-600 dark:text-teal-400 font-extrabold">
                 Traders
@@ -104,13 +104,13 @@ export function NaturalTradersLogo({
             </span>
           )}
 
-          <span className="inline-flex items-center px-1.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+          <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
             Wholesale
           </span>
         </div>
 
         {showTagline && (
-          <p className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-normal mt-0.5 leading-tight flex items-center gap-1.5">
+          <p className="hidden md:flex text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-semibold tracking-normal mt-0.5 leading-tight items-center gap-1.5 whitespace-nowrap">
             <span>{isHindi ? "अधिकृत थोक वितरक" : "Authorized Wholesale Distributor"}</span>
             <span className="text-emerald-500 font-bold">•</span>
             <span className="text-slate-600 dark:text-slate-300">{isHindi ? "धामपुर (बिजनौर)" : "Dhampur (Bijnor)"}</span>

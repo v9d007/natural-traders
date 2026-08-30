@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { LiveActivityLogger } from "@/components/LiveActivityLogger";
 import { COMPANY } from "@/data/company";
 
 export const viewport: Viewport = {
@@ -150,7 +149,6 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-grow">{children}</main>
             <Footer />
-            <LiveActivityLogger />
           </LanguageProvider>
         </ThemeProvider>
       </body>
