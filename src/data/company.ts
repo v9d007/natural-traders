@@ -93,5 +93,5 @@ export const COMPANY: CompanyConfig = {
       "Haryana",
     ],
   },
-  googleAnalyticsId: "G-XXXXXXXXXX",
+  googleAnalyticsId: "G-17SJSPXJ1X",
 };
