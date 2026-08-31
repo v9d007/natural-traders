@@ -18,6 +18,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thenaturaltraders.in"),
+  verification: {
+    google: "py0gdyWXY488FDaCG7LKZYqeqgf-ejPy85ZF7-x1HbM",
+  },
   title: `${COMPANY.name} | Wholesale Distributor for Packaged Water, Cold Drinks, Jeera Soda & Sanitary Pads in Dhampur & Bijnor`,
   description: `Authorized B2B wholesale supplier in Dhampur (Bijnor, UP). Direct manufacturer rates for packaged drinking water (200ml/500ml/1L/20L), cold drinks, jeera masala soda, and sanitary pads in bulk cartons. Call now for dealer rates.`,
   keywords: [
