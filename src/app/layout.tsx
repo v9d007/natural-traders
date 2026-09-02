@@ -89,6 +89,8 @@ export default function RootLayout({
     alternateName: COMPANY.hindiName,
     description: COMPANY.description,
     url: "https://www.thenaturaltraders.in",
+    logo: "https://www.thenaturaltraders.in/icon-512.png",
+    image: "https://www.thenaturaltraders.in/icon-512.png",
     telephone: COMPANY.phone,
     email: COMPANY.email,
     vatID: COMPANY.gstin,
