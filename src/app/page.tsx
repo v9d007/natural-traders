@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,6 +19,7 @@ import {
   Building,
   User,
   MapPin,
+  ChevronDown,
 } from "lucide-react";
 import { COMPANY } from "@/data/company";
 import { PRODUCTS, Product, ProductCategory } from "@/data/products";
@@ -35,9 +36,15 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("featured");
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const { t, language } = useLanguage();
   const isHindi = language === "hi";
+
+  // Reset pagination to 8 when category or search changes
+  useEffect(() => {
+    setVisibleCount(8);
+  }, [selectedCategory, searchQuery]);
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
@@ -307,13 +314,39 @@ export default function HomePage() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-              />
-            ))}
+          <div className="space-y-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+              {filteredProducts.slice(0, visibleCount).map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                />
+              ))}
+            </div>
+
+            {/* View More Products Action Bar */}
+            {filteredProducts.length > visibleCount && (
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6 border-t border-slate-200 dark:border-slate-800">
+                <button
+                  onClick={() => setVisibleCount((prev) => prev + 8)}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-sm transition-all shadow-md shadow-emerald-600/25 cursor-pointer"
+                >
+                  <span>
+                    {isHindi
+                      ? `और उत्पाद देखें (${filteredProducts.length - visibleCount} शेष)`
+                      : `View More Products (${filteredProducts.length - visibleCount} Remaining)`}
+                  </span>
+                  <ChevronDown className="w-4 h-4 animate-bounce" />
+                </button>
+
+                <Link
+                  href="/products"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 text-slate-700 dark:text-slate-200 font-semibold text-sm transition-all shadow-xs"
+                >
+                  <span>{isHindi ? "सम्पूर्ण कैटलॉग देखें →" : "Browse Full Catalog Page →"}</span>
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </section>
