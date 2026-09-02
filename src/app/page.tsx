@@ -10,10 +10,6 @@ import {
   Boxes,
   ArrowRight,
   Search,
-  Sparkles,
-  Droplets,
-  CupSoda,
-  ShieldCheck,
   CheckCircle2,
   Send,
   Building,
@@ -169,72 +165,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. CATEGORY QUICK JUMP BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <button
-            onClick={() => {
-              setSelectedCategory("packaged-water");
-              const el = document.getElementById("catalog");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-blue-500 hover:shadow-md text-left transition-all group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-              <Droplets className="w-5 h-5" />
-            </div>
-            <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{t.catWater}</h3>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">{t.catWaterSub}</p>
-          </button>
-
-          <button
-            onClick={() => {
-              setSelectedCategory("jeera-water");
-              const el = document.getElementById("catalog");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-amber-500 hover:shadow-md text-left transition-all group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{t.catJeera}</h3>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">{t.catJeeraSub}</p>
-          </button>
-
-          <button
-            onClick={() => {
-              setSelectedCategory("cold-drinks");
-              const el = document.getElementById("catalog");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-red-500 hover:shadow-md text-left transition-all group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-              <CupSoda className="w-5 h-5" />
-            </div>
-            <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{t.catColdDrinks}</h3>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">{t.catColdDrinksSub}</p>
-          </button>
-
-          <button
-            onClick={() => {
-              setSelectedCategory("sanitary-pads");
-              const el = document.getElementById("catalog");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-pink-500 hover:shadow-md text-left transition-all group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-pink-50 dark:bg-pink-950/60 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{t.catPads}</h3>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">{t.catPadsSub}</p>
-          </button>
-        </div>
-      </section>
-
-      {/* 3. PRODUCT CATALOG GRID */}
+      {/* 2. PRODUCT CATALOG GRID */}
       <section id="catalog" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-300 dark:border-emerald-800">
