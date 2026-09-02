@@ -76,51 +76,51 @@ export function ServiceAreaMap() {
             </div>
           </div>
 
-          {/* Right Column - Visual Logistics Card */}
+          {/* Right Column - Visual Logistics Card (Clean Light Styling) */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 p-6 sm:p-8 text-white border border-slate-700 shadow-2xl overflow-hidden">
-              {/* Background ambient glow */}
-              <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative rounded-3xl bg-emerald-50/50 dark:bg-slate-800/60 p-6 sm:p-8 text-slate-900 dark:text-white border border-emerald-200/80 dark:border-emerald-800/60 shadow-sm overflow-hidden">
+              {/* Subtle ambient glow */}
+              <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative space-y-6">
-                <div className="flex items-center justify-between border-b border-slate-700 pb-4">
+                <div className="flex items-center justify-between border-b border-emerald-200/70 dark:border-slate-700 pb-4">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-400">
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-700 dark:text-emerald-400">
                       {t.hubTitle}
                     </span>
-                    <h3 className="text-xl font-bold text-white mt-0.5">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-0.5">
                       {t.hubName}
                     </h3>
                   </div>
-                  <span className="p-3 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  <span className="p-3 rounded-2xl bg-white dark:bg-slate-900 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-slate-700 shadow-xs">
                     <Truck className="w-6 h-6" />
                   </span>
                 </div>
 
-                <div className="space-y-3 text-xs sm:text-sm text-slate-300">
+                <div className="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span>{t.hubFeature1}</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span>{t.hubFeature2}</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" />
                     <span>{t.hubFeature3}</span>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-700/80 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="pt-4 border-t border-emerald-200/70 dark:border-slate-700/80 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
-                    <p className="text-slate-400">{t.warehouseAddressLabel}</p>
-                    <p className="font-semibold text-white mt-0.5">
+                    <p className="text-slate-500 dark:text-slate-400">{t.warehouseAddressLabel}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white mt-0.5">
                       {isHindi ? COMPANY.hindiAddress : COMPANY.address}
                     </p>
                   </div>
                   {COMPANY.gstin && (
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono shrink-0">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800/80 text-emerald-800 dark:text-emerald-400 text-xs font-mono shrink-0 shadow-xs">
                       <span className="font-bold">GSTIN:</span>
                       <span>{COMPANY.gstin}</span>
                     </div>

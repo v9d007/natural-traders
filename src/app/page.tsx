@@ -243,31 +243,31 @@ export default function HomePage() {
       {/* 5. DELIVERY AREA NETWORK & MAP */}
       <ServiceAreaMap />
 
-      {/* 6. BULK INQUIRY LEAD CAPTURE FORM */}
+      {/* 6. BULK INQUIRY LEAD CAPTURE FORM (Clean Light Styling) */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-br from-emerald-900 via-slate-900 to-slate-950 p-6 sm:p-10 text-white border border-emerald-800/60 shadow-2xl space-y-6">
+        <div className="rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-10 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-700">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
               {t.quoteBadge}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
               {t.quoteTitle}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
               {t.quoteSubtitle}
             </p>
           </div>
 
           {leadSubmitted ? (
-            <div className="p-6 rounded-2xl bg-emerald-950/80 border border-emerald-600 text-center space-y-2 animate-in fade-in">
-              <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />
-              <h3 className="text-base font-bold text-white">{t.quoteSuccessTitle}</h3>
-              <p className="text-xs text-slate-300">
+            <div className="p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-center space-y-2 animate-in fade-in">
+              <CheckCircle2 className="w-10 h-10 text-emerald-600 dark:text-emerald-400 mx-auto" />
+              <h3 className="text-base font-bold text-slate-900 dark:text-white">{t.quoteSuccessTitle}</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-300">
                 {t.quoteSuccessSub}
               </p>
               <button
                 onClick={() => setLeadSubmitted(false)}
-                className="mt-2 text-xs font-bold text-emerald-400 underline"
+                className="mt-2 text-xs font-bold text-emerald-700 dark:text-emerald-400 underline cursor-pointer"
               >
                 {t.quoteSendAnother}
               </button>
@@ -276,8 +276,8 @@ export default function HomePage() {
             <form onSubmit={handleLeadSubmit} className="space-y-4 max-w-xl mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1.5">
-                    <User className="w-3.5 h-3.5 text-emerald-400" />
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1 flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                     <span>{t.quoteName}</span>
                   </label>
                   <input
@@ -286,13 +286,13 @@ export default function HomePage() {
                     value={leadName}
                     onChange={(e) => setLeadName(e.target.value)}
                     placeholder={t.quoteNamePlaceholder}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-400 outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-500 outline-none shadow-xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1.5">
-                    <Building className="w-3.5 h-3.5 text-emerald-400" />
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1 flex items-center gap-1.5">
+                    <Building className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                     <span>{t.quoteShop}</span>
                   </label>
                   <input
@@ -301,15 +301,15 @@ export default function HomePage() {
                     value={leadShop}
                     onChange={(e) => setLeadShop(e.target.value)}
                     placeholder={t.quoteShopPlaceholder}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-400 outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-500 outline-none shadow-xs"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                     <span>{t.quoteTown}</span>
                   </label>
                   <input
@@ -318,12 +318,12 @@ export default function HomePage() {
                     value={leadTown}
                     onChange={(e) => setLeadTown(e.target.value)}
                     placeholder={t.quoteTownPlaceholder}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-400 outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-500 outline-none shadow-xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     <span>{t.quoteProducts}</span>
                   </label>
                   <input
@@ -332,14 +332,14 @@ export default function HomePage() {
                     value={leadItems}
                     onChange={(e) => setLeadItems(e.target.value)}
                     placeholder={t.quoteProductsPlaceholder}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-400 outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:ring-2 focus:ring-emerald-500 outline-none shadow-xs"
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-[0.99] text-slate-950 font-black text-sm transition-all shadow-lg shadow-emerald-500/25 mt-2"
+                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold text-sm transition-all shadow-md shadow-emerald-600/25 mt-2 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 <span>{t.quoteSubmitBtn}</span>
