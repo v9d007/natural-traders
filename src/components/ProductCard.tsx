@@ -173,14 +173,14 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        {/* 3. Action Buttons */}
+        {/* 3. Action Buttons - Subtle, modern, non-intrusive */}
         <div className="pt-2 sm:pt-2.5 border-t border-slate-100 dark:border-slate-800">
           <Link
             href={`/products/${product.slug}`}
-            className="w-full flex items-center justify-center gap-1 sm:gap-2 h-8 sm:h-10 px-2 sm:px-4 rounded-lg sm:rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 active:scale-[0.98] text-white text-[11px] sm:text-sm font-bold transition-all shadow-xs"
+            className="w-full flex items-center justify-center gap-1 sm:gap-1.5 h-7 sm:h-9 px-2 sm:px-3 rounded-lg sm:rounded-xl bg-slate-50 hover:bg-emerald-50 dark:bg-slate-800/60 dark:hover:bg-emerald-950/40 text-slate-700 hover:text-emerald-700 dark:text-slate-300 dark:hover:text-emerald-400 border border-slate-200 hover:border-emerald-300 dark:border-slate-700 dark:hover:border-emerald-700 text-[11px] sm:text-xs font-semibold transition-all group/btn shadow-xs"
           >
             <span>{t.btnViewDetails}</span>
-            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+            <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform text-slate-400 group-hover/btn:text-emerald-600 dark:group-hover/btn:text-emerald-400" />
           </Link>
         </div>
       </div>

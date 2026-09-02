@@ -74,19 +74,21 @@ export function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {features.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-emerald-500/40 transition-all duration-200"
+              className="p-3.5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-emerald-500/40 transition-all duration-200 flex flex-col justify-between"
             >
-              <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
-                {item.icon}
+              <div>
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-2.5 sm:mb-4 [&>svg]:w-4 [&>svg]:h-4 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
+                  {item.icon}
+                </div>
+                <h3 className="text-xs sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5 sm:mb-2 leading-snug">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                {item.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-[11px] sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-4 sm:line-clamp-none">
                 {item.description}
               </p>
             </div>
