@@ -234,40 +234,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2.5 POPULAR WHOLESALE SEARCH TAGS (SEO & Quick Navigation) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10">
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider flex items-center gap-1.5 mr-1">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>{isHindi ? "लोकप्रिय खोज:" : "Popular Searches:"}</span>
-            </span>
-            {[
-              { label: isHindi ? "200ml व 500ml पानी की बोतलें" : "200ml & 500ml Packaged Water", query: "water", cat: "packaged-water" },
-              { label: isHindi ? "जीरा मसाला सोडा क्रेट" : "Jeera Masala Soda Crates", query: "jeera", cat: "jeera-water" },
-              { label: isHindi ? "पारंपरिक गोली सोडा कांच की बोतल" : "Traditional Goli Soda", query: "goli", cat: "cold-drinks" },
-              { label: isHindi ? "बायोडीग्रेडेबल कैरी बैग्स (CPCB मान्य)" : "CPCB Compostable Carry Bags", query: "compostable", cat: "eco-compostable" },
-              { label: isHindi ? "7Soft सैनिटरी पैड्स कार्टन" : "7Soft Sanitary Pads Bulk", query: "pads", cat: "sanitary-pads" },
-              { label: isHindi ? "बेबी डायपर पैंट्स" : "Baby Pants Diapers", query: "diaper", cat: "baby-diapers" },
-              { label: isHindi ? "श्रीयश नमकीन व चिप्स" : "Shreeyash Namkeen & Chips", query: "namkeen", cat: "namkeen-snacks" },
-            ].map((item, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setSelectedCategory(item.cat as ProductCategory);
-                  setSearchQuery(item.query);
-                  const el = document.getElementById("catalog");
-                  if (el) el.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-700 dark:hover:text-emerald-400 border border-slate-200 dark:border-slate-700 transition-all hover:scale-[1.02]"
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 3. PRODUCT CATALOG GRID */}
       <section id="catalog" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
