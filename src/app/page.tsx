@@ -221,27 +221,16 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* View More Products Action Bar */}
+            {/* Simple See More Action */}
             {filteredProducts.length > visibleCount && (
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6 border-t border-slate-200 dark:border-slate-800">
+              <div className="text-center pt-4">
                 <button
                   onClick={() => setVisibleCount((prev) => prev + 8)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-sm transition-all shadow-md shadow-emerald-600/25 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full border border-slate-300 dark:border-slate-700 bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-200 text-xs sm:text-sm font-semibold transition-all shadow-xs hover:border-emerald-500 hover:text-emerald-600 dark:hover:border-emerald-500 dark:hover:text-emerald-400 cursor-pointer"
                 >
-                  <span>
-                    {isHindi
-                      ? `और उत्पाद देखें (${filteredProducts.length - visibleCount} शेष)`
-                      : `View More Products (${filteredProducts.length - visibleCount} Remaining)`}
-                  </span>
-                  <ChevronDown className="w-4 h-4 animate-bounce" />
+                  <span>{isHindi ? "और देखें" : "See More"}</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                 </button>
-
-                <Link
-                  href="/products"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 text-slate-700 dark:text-slate-200 font-semibold text-sm transition-all shadow-xs"
-                >
-                  <span>{isHindi ? "सम्पूर्ण कैटलॉग देखें →" : "Browse Full Catalog Page →"}</span>
-                </Link>
               </div>
             )}
           </div>
