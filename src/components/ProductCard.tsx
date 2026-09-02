@@ -9,6 +9,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Phone,
 } from "lucide-react";
 import { Product } from "@/data/products";
 import { useLanguage } from "@/context/LanguageContext";
@@ -160,12 +161,15 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
           </div>
 
-          {/* MRP Row */}
-          <div className="flex items-center gap-1 text-[11px] sm:text-xs pt-0.5 sm:pt-1">
-            <span className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-[11px]">MRP:</span>
-            <strong className="text-slate-900 dark:text-white font-bold text-xs sm:text-sm whitespace-nowrap">
-              {product.mrpRef}
-            </strong>
+          {/* Wholesale Rate on Enquiry */}
+          <div className="flex items-center justify-between gap-1 text-[10px] sm:text-xs pt-0.5 sm:pt-1">
+            <span className="text-slate-500 dark:text-slate-400 font-medium shrink-0">
+              {isHindi ? "थोक रेट:" : "Wholesale:"}
+            </span>
+            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 font-bold text-[10px] sm:text-[11px] border border-emerald-200/80 dark:border-emerald-800/60 truncate">
+              <Phone className="w-2.5 h-2.5 shrink-0" />
+              <span className="truncate">{isHindi ? "पूछताछ पर उपलब्ध" : "On Enquiry"}</span>
+            </span>
           </div>
         </div>
 

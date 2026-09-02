@@ -162,9 +162,9 @@ export function ProductDetailClient({ product, relatedProducts }: ProductDetailC
             </div>
 
             <div>
-              <span className="text-slate-500 block">{t.mrpLabel}:</span>
-              <strong className="text-sm text-slate-900 dark:text-white mt-0.5 block">
-                {product.mrpRef}
+              <span className="text-slate-500 block">{isHindi ? "थोक मूल्य / रेट:" : "Wholesale Price:"}</span>
+              <strong className="text-sm text-emerald-600 dark:text-emerald-400 mt-0.5 block">
+                {isHindi ? "कॉल / व्हाट्सएप पर पूछताछ करें" : "Available on Enquiry (Call / WhatsApp)"}
               </strong>
             </div>
 

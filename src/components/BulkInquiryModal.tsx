@@ -111,8 +111,8 @@ export function BulkInquiryModal({ product, isOpen, onClose }: BulkInquiryModalP
                   {t.moqLabel}: {isHindi && product.hindiMoq ? product.hindiMoq : product.moq}
                 </span>
                 <span className="text-slate-400">|</span>
-                <span className="text-slate-600 dark:text-slate-300">
-                  {t.mrpLabel}: {product.mrpRef}
+                <span className="text-emerald-700 dark:text-emerald-400 font-semibold text-xs">
+                  {isHindi ? "रेट: पूछताछ पर उपलब्ध" : "Rate: On Enquiry"}
                 </span>
               </div>
             </div>
