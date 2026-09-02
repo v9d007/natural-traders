@@ -60,6 +60,7 @@ export default function HomePage() {
         product.description.toLowerCase().includes(q) ||
         product.seoKeywords.some((k) => k.toLowerCase().includes(q));
 
+      return matchesCat && matchesSearch;
     }).sort((a, b) => {
       if (sortBy === "name-asc") return a.name.localeCompare(b.name);
       if (sortBy === "moq-low") return a.moqUnits - b.moqUnits;
